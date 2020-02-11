@@ -1,0 +1,7 @@
+settings_form:
+  path: '/admin/config/settings_form'
+  defaults:
+    _controller: 'Drupal\settings_form\Controller\FormController::content'
+    _title: 'Module configuration screen'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,13 @@
+block.settings.form_block:
+  type: block_settings
+  label: 'Form block settings'
+  mapping:
+    custom_block_link:
+      type: url
+      label: 'Form block url'
+    custom_block_text:
+      type: textarea
+      label: 'Form block textarea'
+    custom_block_html:
+      type: text_format
+      label: 'Form block html'
