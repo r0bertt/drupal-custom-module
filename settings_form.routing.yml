@@ -1,5 +1,5 @@
 settings_form:
-  path: 'settings_form'
+  path: 'settings-form'
   defaults:
     _controller: '\Drupal\settings_form\Controller\FormController::content'
     _title: 'Module configuration screen'

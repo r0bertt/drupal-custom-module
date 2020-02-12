@@ -5,7 +5,8 @@ namespace Drupal\settings_form\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * The form controller.
+ * Class CustomController
+ * @package Drupal\settings_form\Controller
  */
 class FormController extends ControllerBase
 {
@@ -15,11 +16,10 @@ class FormController extends ControllerBase
    */
   public function content()
   {
-    $build = [
+    return [
       '#type' => 'markup',
       '#markup' => $this->t('My settings form page!'),
     ];
-    return $build;
   }
 
 }
