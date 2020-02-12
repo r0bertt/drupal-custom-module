@@ -3,10 +3,10 @@
 /**
  * Implements hook_help().
  */
-function settings_form_module_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match)
+function settings_form_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match)
 {
   switch ($route_name) {
-    case 'help.page.settings_form_module':
+    case 'help.page.settings_form':
       return t('
         <h2>Settings form module help page.</h2>
         <h3>Instructions</h3>

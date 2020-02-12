@@ -3,7 +3,7 @@
 /**
  * Implements hook_install().
  */
-function settings_form_module_install()
+function settings_form_install()
 {
 
 }

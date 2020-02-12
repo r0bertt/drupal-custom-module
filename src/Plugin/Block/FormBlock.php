@@ -10,7 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Provides a 'Form' block.
  *
  * @Block(
- *   id = "settings_form_module_block",
+ *   id = "settings_form_block",
  *   admin_label = @Translation("Settings form block"),
  * )
  */
@@ -24,6 +24,7 @@ class FormBlock extends BlockBase implements BlockPluginInterface
   public function build()
   {
     $config = $this->getConfiguration();
+
     $html = $config['form_block_html']['value'];
 
     return [
