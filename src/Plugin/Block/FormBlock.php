@@ -12,31 +12,11 @@ use Drupal\Core\Form\FormStateInterface;
  * @Block(
  *   id = "settings_form_custom_block",
  *   admin_label = @Translation("Settings form block"),
+ *   category = @Translation("Settings form"),
  * )
  */
 class FormBlock extends BlockBase implements BlockPluginInterface
 {
-  // Access  method here ...
-
-  /**
-   * {@inheritdoc}
-   */
-  public function build()
-  {
-    $config = $this->getConfiguration();
-    $html = $config['form_block_html']['value'];
-
-    return [
-      '#markup' => $this->t("Links:<div><a href='@link'>@link</a></div>Text:<div>@text</div>Html:<div>$html</div>", [
-        '@text' => $config['form_block_text'],
-        '@link' => $config['form_block_link'],
-        '@html' => $config['form_block_html']['value']
-      ]),
-      '#attached' => [
-        'library' => 'settings_form/block-script'
-      ]
-    ];
-  }
 
   public function blockForm($form, FormStateInterface $form_state)
   {
@@ -53,14 +33,14 @@ class FormBlock extends BlockBase implements BlockPluginInterface
     ];
 
     $form['form_block_link'] = [
-      '#type' => 'textarea',
+      '#type' => 'url',
       '#title' => $this->t('Form block link'),
       '#default_value' => isset($config['form_block_link']) ? $config['form_block_link'] : '',
       '#description' => $this->t('Settings form module block link'),
     ];
 
     $form['form_block_html'] = [
-      '#type' => 'textarea',
+      '#type' => 'text_format',
       '#title' => $this->t('Form block html'),
       '#default_value' => isset($config['form_block_html']) ? $config['form_block_html'] : '',
       '#description' => $this->t('Settings form module block html'),
